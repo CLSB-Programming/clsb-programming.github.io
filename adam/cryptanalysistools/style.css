@@ -1,0 +1,25 @@
+body {
+    font-family: 'Source Sans Pro', Lato, Liberation Sans, Open Sans, Helevetica, Helevetica Neue, Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+}
+
+#title {
+    font-size: 50px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid #ccc;
+    padding: 6px;
+}
+
+select, button {
+    padding: 10px;
+}
