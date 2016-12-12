@@ -17,7 +17,7 @@
  <header>
 
   <head>
-
+ <link rel="stylesheet" type="text/css" href="thomas.css">
  <title>my home page</title>
 
   </head>
