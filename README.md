@@ -1,6 +1,4 @@
 # CLSB Programming
-The CLSB Programming Website Repository.
-
-[Click here to go to the site.]
+The CLSB Programming website repository.
 
 [Click here to go to the site.]: https://clsb-programming.github.io
