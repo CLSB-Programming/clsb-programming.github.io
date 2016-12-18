@@ -1,0 +1,56 @@
+.turquoise {
+    color: #40E0D0
+}
+
+.orange {
+    color: #EA6045
+}
+
+.yellow {
+    color: #F8CA4D
+}
+
+.blue {
+    color: #3F5666
+}
+
+.navy {
+    color: #2F3440
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+}
+
+body {
+    font-family: 'Source Sans Pro', Helevetica, Helevetica Neue, Arial, sans-serif;
+}
+
+#huge_hi {
+    font-size: 60px;
+    margin: 0;
+}
+
+ul {
+    list-style-type: square;
+}
+
+a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #0000EE;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (min-width: 768px) {
+    /* Non-mobile */
+    #huge_hi {
+        font-size: 100px;
+        margin: 0 0 0 -8px;
+    }
+}
+0
