@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <title>Cryptanalysis Tools</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="title">Cryptanalysis tools</h1>
+        <h2>Text transformations</h2>
+        <textarea id="textTransformText"></textarea><br />
+        <select id="textTransformTransformation">
+            <option value="uppercase">To uppercase</option>
+            <option value="lowercase">To lowercase</option>
+            <option value="removeSpaces">Remove spaces</option>
+            <option value="reverse">Reverse</option>
+            <option value="toNumbersZero">Turn to numbers where A=0</option>
+            <option value="toNumbersOne">Turn to numbers where A=1</option>
+        </select>
+        <button onclick="textTransform()">Transform</button>
+
+        <h2>Frequency analysis</h2>
+        <textarea id="frequencyAnalysisText" oninput="frequencyAnalysis()"></textarea><br />
+        <table>
+            <tr>
+                <th>Cipher text letter</th>
+                <td>A</td>
+                <td>B</td>
+                <td>C</td>
+                <td>D</td>
+                <td>E</td>
+                <td>F</td>
+                <td>G</td>
+                <td>H</td>
+                <td>I</td>
+                <td>J</td>
+                <td>K</td>
+                <td>L</td>
+                <td>M</td>
+                <td>N</td>
+                <td>O</td>
+                <td>P</td>
+                <td>Q</td>
+                <td>R</td>
+                <td>S</td>
+                <td>T</td>
+                <td>U</td>
+                <td>V</td>
+                <td>X</td>
+                <td>W</td>
+                <td>Y</td>
+                <td>Z</td>
+            </tr>
+            <tr id="freqNumber">
+                <th># Frequency</th>
+            </tr>
+            <tr id="freqPercent">
+                <th>% Frequency</th>
+            </tr>
+            <tr id="freqRank">
+                <th>Rank</th>
+            </tr>
+        </table>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
