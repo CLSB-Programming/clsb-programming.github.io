@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro" rel="stylesheet">
+	<title>Cookie Clicker</title>
+	<link href="../style.css" rel="stylesheet">
+	<script type="text/javascript">
+		// Start with 0
+		var cookies = 0;
+
+		// User clicks the giant cookie
+		function cookieClick() {
+			cookies += 1;
+		}
+
+		// TODO: Display cookies
+	</script>
+</head>
+<body>
+	<div class="container">
+		<p>You have <span id="cookieQuantity">0</span> cookies</p>
+		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Pepperidge-Farm-Nantucket-Cookie.jpg/640px-Pepperidge-Farm-Nantucket-Cookie.jpg" alt="Cookie" onclick="cookieClick(); return false" />
+	</div>
+</body>
+</html>
