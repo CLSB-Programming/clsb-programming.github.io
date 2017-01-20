@@ -1,0 +1,67 @@
+body {
+    padding: 0;
+    margin: 100;
+    background: yellow;
+}
+
+
+/** Header styles **/
+
+h1 {
+    color: aqua;
+    font-family: 'blackadder', sans-serif;
+    font-size: 100px;
+    line-height: 76px;
+    margin: 100;
+    position: relative;
+    text-align: center;
+    top: 20%;
+    background-color: green;
+}
+
+
+/** List style **/
+
+h2 {
+    color: green;
+    font-family: 'Raleway', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    text-align: left;
+    text-transform: uppercase;
+     background-color: aqua;
+}
+
+ul {
+    margin: 100 auto;
+    padding: 0;
+    width: 50%;
+}
+
+li {
+    border-bottom: 1px solid #E4BB97;
+    list-style: none;
+    margin: 100px 0px;
+    padding-bottom: 60px;
+    font-size: 20px;
+}
+
+p {
+    color: blue;
+    line-height: 32px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+a {
+    color: blue;
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    font-weight: 900;
+    text-align: left;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+     background-color: green;
+}
