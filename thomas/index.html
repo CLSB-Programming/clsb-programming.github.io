@@ -22,7 +22,15 @@
         </li>
         <li>the above are the main ones</li>
     </ul>
-    <h2>Good pic</h2>
-    <img src="http://pngimg.com/upload/fish_PNG10538.png" alt="good pic" style="width:304px;height:228px;">
+    <h2>Good game</h2>
+    <img onclick="addFish()" src="http://pngimg.com/upload/fish_PNG10538.png" alt="good pic" style="width:204px;height:128px;">
+    
+    <script>
+        var fish = 0;
+        function addFish() {
+            fish = fish+1;
+            alert(fish);
+        }
+    </script>
 </body>
 </html>
