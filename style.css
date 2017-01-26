@@ -54,4 +54,18 @@ code {
     #title {
         font-size: 24px;
     }
+}    .text {
+        visibility: hidden;
+        position: relative;
+        
+    }
+    
+    
+    .text:after {
+        visibility: visible;
+        top: 0;
+        left: 0;
+        content: "Mobile Version";
+        
+    }
 }
