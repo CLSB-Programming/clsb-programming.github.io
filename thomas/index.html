@@ -16,16 +16,42 @@
     <ul>
         <li>
             <a HREF="https://en.wikipedia.org/wiki/Wargaming"> don't usually use wiki this much</a>
-        </li>
+	    </li>
         <li>
             <a HREF="http://www.w3schools.com/html/html_lists.asp"> how to do what I do in index.html</a>
         </li>
         <li>the above are the main ones</li>
     </ul>
     <h2>Good game</h2>
-    <img onclick="addFish()" src="http://pngimg.com/upload/fish_PNG10538.png" alt="good pic" style="width:204px;height:128px;">
-    <p>You have <span id="fishQuantity">0</span> fish</p>
-    <script>
+    <img onclick="addFish()" id='fishpic' src="http://pngimg.com/upload/fish_PNG10538.png" alt="good pic" style="width:204px;height:128px;">
+     <img id='1' src="http://s.hswstatic.com/gif/how-to-build-a-pond-2.jpg" alt=pond style=width:175px;height:100px>
+<img id=2 scr=http://classroomclipart.com/images/gallery/Clipart/Sports/Fishing/TN_man-wearing-fishing-vest-with-fishing-pole-bucket-fish-clipart-6613.jpg alt fisherman style=width:175px;height:100px>
+<img id=3 scr= ahttps://s-media-cache-ak0.pinimg.com/originals/da/5f/52/da5f524d8b3568ac64eec47d4609d7ee.jpg alt coral reef style=width:175px;height:100px>	
+   <div>
+	     <div id="fish_container">
+			<p id="fishQuantity">0</p>
+			<p id="fishQuantity_under">fish</p>
+			<p>(<span id="fps">0.0</span> per second)</p>
+			
+		</div>
+		<div id="shop_container">
+			<ul id="products">
+
+				<!--
+				<li class="product" id="1" onclick="purchaseStoreOption(1)">
+					<p class="product_owned">10</p>
+					<img src="img/cursor.svg" alt="Cursor" class="product_image" draggable="false" />
+					<div class="product_text">
+						<p class="product_title"><span class="product_name">Cursor</span> (<span class="product_cps">0.1</span> cps)</p>
+						<p class="product_price">10</p>
+					</div>
+				</li>
+				-->
+
+			</ul>
+		</div>
+	</div>
+	 <script>
         var fish = 0;
         function addFish() {
             fish = fish + 1;
@@ -38,6 +64,104 @@
         function displayFish() { 
             fishQuantity.innerHTML = fish; 
         }
+	    // img
+	    'fishpic':hover {
+		max-width: 244px
+	    }
+	    /*animation*/
+	    from {
+ +        opacity: 1;
+ +    }
+ +    to {
+ +        opacity: 0;
+ +        transform: translate(0, -40px);
+	 
+	 // Adds items to the store
+function addStoreOption(storeOption) {
+    // Create long string of HTML code that represents a product. Fills in with details from storeOption object where appropriate.
+    var s = "<li class='product' id='" + storeOption.id + "' onclick='purchaseStoreOption(" + storeOption.id + ")'>" +
+            "<p class='product_owned'>" + ((storeOption.product_owned === 0) ? "" : storeOption.product_owned) + "</p>" +
+            "<img src='" + storeOption.image_src + "' alt='" + storeOption.product_name +"' class='product_image' draggable='false' />" +
+            "<div class='product_text'>" +
+            "<p class='product_title'><span class='product_name'>" + storeOption.product_name + "</span> (<span class='product_cps'>" + storeOption.product_cps.toLocaleString() + "</span> cps)</p>" +
+            "<p class='product_price'>" + storeOption.product_price.toLocaleString() + "</p></li>" +
+            "</div>";
+    // Updates the proudct list with the new product
+    e_products.innerHTML += s;
+	// Handles clicking on a product in the store
+function purchaseStoreOption(id) {
+    // Check they have enough fish to purchase product
+    if(storeOptions[id].product_price <= fish) {
+        // If they do, subtract that number of fish
+        fish -= storeOptions[id].product_price;
+        // Incremement the product_owned value
+        storeOptions[id].product_owned++;
+        // Update the DOM to reflect the new product_owned value
+        document.getElementById(id).getElementsByClassName('product_owned')[0].innerHTML = storeOptions[id].product_owned;
+
+        // Recalculate the cps
+        calculatefps();
+    }
+}
+}
+// Calculates cps
+function calculatefps() {
+    // Reset the cps to zero
+    fps = 0;
+    // Loop through products
+    for(var i = 0, keys = Object.keys(storeOptions); i < keys.length; i++) {
+        // For each product, total cps = number owned * cps of one
+        fps += storeOptions[keys[i]].product_owned * storeOptions[keys[i]].product_cps;
+    }
+
+    // Display cps
+    e_cookieCps.innerHTML = fps.toLocaleString(undefined, {minimumFractionDigits: 1, maximumFractionDigits: 1});
+}
+
+// Every tick, update the number of cookies and display it
+function gameLoop() {
+    // Add the cookies earned in the last tick to the total
+    fish += (fps / ticksPerSecond);
+    displayfish();
+
+// Creates example storeOption object
+storeOptions = {
+    1: {
+        id: 1,
+        product_owned: 0,
+        product_name: "pond",
+        product_fps: 1,
+        product_price: 10
+    },
+    2: {
+        id: 2,
+        product_owned: 0,
+        image_src: "img/oven.svg",
+        product_name: "fishrmen",
+        product_cps: 10,
+        product_price: 100
+    },
+    3: {
+        id: 3,
+        product_owned: 0 ,
+        product_name: "coral reef",
+        product_cps: 100,
+        product_price: 1000
+    }
+};
+// Adds the storeOptions to the page
+addStoreOption(storeOptions["1"]);
+addStoreOption(storeOptions["2"]);
+addStoreOption(storeOptions["3"]);
+
+// Set gameLoop running
+window.setInterval(gameLoop, (1000 / ticksPerSecond));
+	  			
+			
+	
+</body>
+				    
+
     </script>
 </body>
 </html>
