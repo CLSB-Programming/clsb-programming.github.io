@@ -4,6 +4,19 @@
 <head>
     <title>my home page</title>
     <link href="style.css" rel="stylesheet" type="text/css">
+	<style>
+	img{
+			width:204px;
+			height:128px;
+		transition: width 1s;
+		transition: height 1s;
+		}
+		img:active{
+			width:304px;
+			height:228px;
+		}	
+	</style>	
+			
 </head>
 
 <body>
@@ -23,7 +36,7 @@
         <li>the above are the main ones</li>
     </ul>
     <h2>Good game</h2>
-    <img onclick="addFish()" src="http://pngimg.com/upload/fish_PNG10538.png" alt="good pic" style="width:204px;height:128px;">
+    <img onclick="addFish()"  src="http://pngimg.com/upload/fish_PNG10538.png" alt="good pic" style=";">
     <p>You have <span id="fishQuantity">0</span> fish</p>
     <script>
         var fish = 0;
