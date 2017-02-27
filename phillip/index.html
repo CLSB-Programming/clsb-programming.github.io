@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+	<title>Cookie Clicker</title>
+	<H1> The software is where your finger will hurt</H1>
+	<style>
+		img {
+			width: 300px
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<img src="http://vignette2.wikia.nocookie.net/mspafetchmodus/images/a/ab/Chocolate_chip_cookie.jpg/revision/latest?cb=20100726200146" onclick="addCookie()">
+	</div>
+	<h2 id="cookieDisplay">You have 0 cookies</h2>
+
+	<script type="text/javascript">
+		var cookies = 0;
+		var cookieDisplay = document.getElementById('cookieDisplay');
+
+		function addCookie() {
+			cookies = cookies + 1;
+			cookieDisplay.innerHTML = "You have " + cookies + " cookies";	
+		}
+	</script>
+</body>
+</html>
