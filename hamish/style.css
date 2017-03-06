@@ -1,0 +1,14 @@
+/* Mobile */
+
+@media screen and (max-width: 480px) {
+    
+    img {
+        zoom: 0.2;
+        -moz-transform: scale(0.2);
+    }
+}
+/* Background Colour */
+
+body {
+    background-color: lightblue;
+}
