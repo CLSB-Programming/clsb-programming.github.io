@@ -38,8 +38,12 @@
     <h2>Good game</h2>
     <img onclick="addFish()"  src="http://www.drodd.com/images15/fish8.png" alt="good pic" style=";">
     <p>You have <span id="fishQuantity">0</span> fish</p>
+	<h2> fish.com</h2>
+	<p>onclick="buyapond" pond           15 fish<p>
+	<p> onclick="buyapond"</p>
     <script>
         var fish = 0;
+	    var fps = 0;
         function addFish() {
             fish = fish + 1;
  
@@ -51,7 +55,26 @@
         function displayFish() { 
             fishQuantity.innerHTML = fish; 
         }
+	function add fps(){
+	fish = fish + fps
+	}
+	
+	    
+	    function buyapond() {
+	    if(fish>19)
+		    fish = fish - 20
+		    fps = fps + 1
+	    }
+		    
+		    
+	    
     </script>
+	
+	<h2> fish.com</h2>
+	<p> pond<p>
+	
+	
+	
 	<h1> I am soooooooooooooooooooooooooooooooooo talented</h1>
 		
 </body>
