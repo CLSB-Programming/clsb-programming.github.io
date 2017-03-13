@@ -39,8 +39,10 @@
     <img onclick="addFish()"  src="http://www.drodd.com/images15/fish8.png" alt="good pic" style=";">
     <p>You have <span id="fishQuantity">0</span> fish</p>
 	<h2> fish.com</h2>
-	<p>onclick="buyapond" pond           15 fish<p>
-	<p> onclick="buyapond"</p>
+	<p onclick="buyapond">Pond: 15 fish<p>
+	<p onclick="buyafisherman"> Fisherman: 100 fish<p>
+	<p onclick="buyacoralreef">coral reef: 150<p>
+	<p onclick="buythegreatbarrierreef">coral the great barrier reef: 200<p>
     <script>
         var fish = 0;
 	    var fps = 0;
@@ -65,13 +67,24 @@
 		    fish = fish - 20
 		    fps = fps + 1
 	    }
-		    
-		    
-	    
+	   function buyafisherman() {
+	    if(fish>99)
+		    fish = fish - 100
+		    fps = fps + 10
+	    }	    
+	   function buyacoralreef () {
+	    if(fish>149)
+		    fish = fish - 150
+		    fps = fps + 20
+	    }	    
+	     function buythegreatbarrierreef () {
+	    if(fish>199)
+		    fish = fish - 200
+		    fps = fps + 50
+	    }	    
     </script>
 	
-	<h2> fish.com</h2>
-	<p> pond<p>
+	
 	
 	
 	
