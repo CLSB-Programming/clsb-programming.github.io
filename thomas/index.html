@@ -1,83 +1,79 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>my home page</title>
     <link href="style.css" rel="stylesheet" type="text/css">
-</head>
+    <style>
+        img {
+            width: 204px;
+            height: 128px;
+            transition: width 5s;
+            transition: height 4s;
+        }
+        
+        img:active {
+            width: 264px;
+            height: 228px;
+        }
+    </style>
 
+</head>
 <body>
     <h1>My page</h1>
     <h2>How to Cheat on Flappy Cube</h2>
     <p>Just hold up</p>
     <p></p>
-    <h2>Amazing links</h2><a HREF="https://en.m.wikipedia.org/wiki/Fish" > link to an amazing page</a> <a HREF="https://en.m.wikipedia.org/wiki/Fish"> link to a just as good page</a>
+    <h2>Amazing links</h2><a HREF="https://en.m.wikipedia.org/wiki/Fish"> link to an amazing page</a> <a HREF="https://en.m.wikipedia.org/wiki/Fish"> link to a just as good page</a>
     <h2>What hobbies am I interested in</h2>
     <ul>
         <li>
             <a HREF="https://en.wikipedia.org/wiki/Wargaming"> Don't usually use wiki this much</a>
         </li>
         <li>
-            <a HREF="https://www.w3schools.com/html/html_lists.asp"> How to do what I do in index.html</a>
+            <a HREF="http://www.w3schools.com/html/html_lists.asp"> How to do what I do in index.html</a>
         </li>
         <li>The above are the main ones</li>
     </ul>
     <h2>Good game</h2>
-    <img onclick="addFish()"  src="fish.png" alt="good pic" style=";">
+    <img onclick="addFish()" src="fish.png" alt="good pic" height="128px">
     <p>You have <span id="fishQuantity">0</span> fish</p>
-	<h2> fish.com</h2>
-	<p onclick="buyapond">Pond: 15 fish<p>
-	<p onclick="buyafisherman"> Fisherman: 100 fish<p>
-	<p onclick="buyacoralreef">coral reef: 150<p>
-	<p onclick="buythegreatbarrierreef">coral the great barrier reef: 200<p>
+    <h2> fish.com</h2>
+    <p onclick="buy(20, 1)">Pond: 15 fish</p>
+    <p onclick="buy(100, 10)"> Fisherman: 100 fish</p>
+    <p onclick="buy(150, 20)">coral reef: 150</p>
+    <p onclick="buy(200, 50)">coral the great barrier reef: 200</p>
     <script>
         var fish = 0;
-	    var fps = 0;
+        var fps = 0;
+
         function addFish() {
             fish = fish + 1;
- 
+
             // Show them how many fish they have 
             displayFish();
         }
 
-		// Display fish
-        function displayFish() { 
-            fishQuantity.innerHTML = fish; 
+        // Display fish
+        function displayFish() {
+            fishQuantity.innerHTML = fish;
         }
-	function addfps(){
-	fish = fish + fps
-	}
-	
-	    
-	    function buyapond() {
-	    if(fish>19)
-		    fish = fish - 20
-		    fps = fps + 1
-	    }
-	   function buyafisherman() {
-	    if(fish>99)
-		    fish = fish - 100
-		    fps = fps + 10
-	    }	    
-	   function buyacoralreef () {
-	    if(fish>149)
-		    fish = fish - 150
-		    fps = fps + 20
-	    }	    
-	     function buythegreatbarrierreef () {
-	    if(fish>199)
-		    fish = fish - 200
-		    fps = fps + 50
-	    }
-	    
-	    setInterval(addfps, 1000);
+
+        function addfps() {
+            fish = fish + fps;
+            displayFish();
+        }
+
+        function buy(cost, fpsToAdd) {
+            if (fish >= cost) {
+                fish = fish - cost;
+                displayFish();
+                fps = fps + fpsToAdd;
+            }
+        }
+
+        setInterval(addfps, 1000);
     </script>
-	
-	
-	
-	
-	
-	<h1> I am soooooooooooooooooooooooooooooooooo talented</h1>
-		
+    <h1> I am soooooooooooooooooooooooooooooooooo talented</h1>
+
 </body>
 </html>
