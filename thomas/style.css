@@ -71,13 +71,14 @@ a {
 
 /* Image Styling */
 
-	img{
-			width:204px;
-			height:128px;
-		transition: width 5s;
-		transition: height 4s;
-		}
-		img:active{
-			width:264px;
-			height:228px;
+img{
+	width:204px;
+	height:128px;
+	transition: width 5s;
+	transition: height 4s;
+}
+
+img:active{
+	width:264px;
+	height:228px;
 }
